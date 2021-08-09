@@ -1,10 +1,7 @@
 package com.squidxtv.tlos.setup;
 
 import com.squidxtv.tlos.entity.PharaohEntity;
-import com.squidxtv.tlos.items.HealSpell;
-import com.squidxtv.tlos.items.StrengthSpell;
-import com.squidxtv.tlos.items.TNTStaff;
-import com.squidxtv.tlos.items.TheLegendOfSteveSpawnEgg;
+import com.squidxtv.tlos.items.*;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -23,6 +20,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.squidxtv.tlos.TheLegendOfSteve.MODID;
+import static com.squidxtv.tlos.items.EnergyDrink.EnergyDrinkFood;
+
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MODID)
 public class Registration {
@@ -39,15 +38,14 @@ public class Registration {
 
     //Items:
     public static final Food TankApple = (new Food.Builder()).nutrition(4).saturationMod(0.3F).effect(new EffectInstance(Effects.DAMAGE_RESISTANCE, 1200, 0), 1.0F).alwaysEat().build();
-    public static final Food EnergyDrink = (new Food.Builder()).nutrition(0).saturationMod(0.0F).effect(new EffectInstance(Effects.MOVEMENT_SPEED, 1200, 0), 1.0F).effect(new EffectInstance(Effects.DIG_SPEED, 1200, 0), 1.0F).alwaysEat().build();
 
     public static final RegistryObject<TNTStaff> TNT_LAUNCHER = ITEMS.register("tnt_launcher", () ->
             new TNTStaff(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1).durability(128)));
 
     public static final RegistryObject<Item> TANK_APPLE = ITEMS.register("tank_apple", () ->
             new Item(new Item.Properties().tab(ModSetup.GROUP).food(TankApple)));
-    public static final RegistryObject<Item> ENERGY_DRINK = ITEMS.register("energy_drink", () ->
-            new Item(new Item.Properties().tab(ModSetup.GROUP).food(EnergyDrink)));
+    public static final RegistryObject<EnergyDrink> ENERGY_DRINK = ITEMS.register("energy_drink", () ->
+            new EnergyDrink(new Item.Properties().tab(ModSetup.GROUP).food(EnergyDrinkFood)));
 
     public static final RegistryObject<HealSpell> HEAL_SPELL = ITEMS.register("heal_spell", () ->
             new HealSpell(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1).durability(10)));
@@ -69,7 +67,7 @@ public class Registration {
     //Entities:
     public static final RegistryObject<EntityType<PharaohEntity>> PHARAOH = ENTITIES.register("pharaoh", () -> EntityType.Builder.of(PharaohEntity::new, EntityClassification.MONSTER)
             .sized(.6F, 2.1F).build("pharaoh"));
-    public static final RegistryObject<Item> PHARAOH_SPAWN_EGG = ITEMS.register("pharaoh_spawn_egg", () -> new TheLegendOfSteveSpawnEgg(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1), PHARAOH::get, 1575190, 6031692));
+    public static final RegistryObject<Item> PHARAOH_SPAWN_EGG = ITEMS.register("pharaoh_spawn_egg", () -> new TheLegendOfSteveSpawnEgg(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1), PHARAOH::get, 16118736, 12563995));
 
 
     @SubscribeEvent
