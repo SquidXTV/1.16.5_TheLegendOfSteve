@@ -5,12 +5,17 @@
   "item.tlos.heal_spell": "Heal Spell",
   "item.tlos.strength_spell": "Strength Spell",
   "item.tlos.tank_apple": "Tank Apple",
+  "item.tlos.energy_drink": "Energy Drink",
+  "item.tlos.pharaoh_spawn_egg": "Pharaoh Spawn Egg",
 
   //Blocks
   "block.tlos.tntx8": "TNTx8",
   "block.tlos.tntx64": "TNTx64",
 
   //Creative Tab
-  "itemGroup.tlosGroup": "The Legend Of Steve"
+  "itemGroup.tlosGroup": "The Legend Of Steve",
+
+  //Entity
+  "entity.tlos.pharaoh": "Pharaoh"
 
 }
