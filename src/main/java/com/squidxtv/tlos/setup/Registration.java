@@ -1,21 +1,17 @@
 package com.squidxtv.tlos.setup;
 
-import com.squidxtv.tlos.TheLegendOfSteve;
 import com.squidxtv.tlos.entity.PharaohEntity;
 import com.squidxtv.tlos.items.HealSpell;
-import com.squidxtv.tlos.items.PharaohEggItem;
 import com.squidxtv.tlos.items.StrengthSpell;
 import com.squidxtv.tlos.items.TNTStaff;
+import com.squidxtv.tlos.items.TheLegendOfSteveSpawnEgg;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
@@ -72,8 +68,8 @@ public class Registration {
 
     //Entities:
     public static final RegistryObject<EntityType<PharaohEntity>> PHARAOH = ENTITIES.register("pharaoh", () -> EntityType.Builder.of(PharaohEntity::new, EntityClassification.MONSTER)
-            .sized(1, 1).build("pharaoh"));
-    //public static final RegistryObject<Item> PHARAOH_EGG = ITEMS.register("pharaoh_egg", () -> new PharaohEggItem(PHARAOH.get(),  0x4da744, 0x316f5d, new Item.Properties().tab(ModSetup.GROUP).stacksTo(1)));
+            .sized(.6F, 2.1F).build("pharaoh"));
+    public static final RegistryObject<Item> PHARAOH_SPAWN_EGG = ITEMS.register("pharaoh_spawn_egg", () -> new TheLegendOfSteveSpawnEgg(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1), PHARAOH::get, 1575190, 6031692));
 
 
     @SubscribeEvent
