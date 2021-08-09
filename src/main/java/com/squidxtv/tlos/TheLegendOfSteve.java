@@ -29,3 +29,6 @@ public class TheLegendOfSteve {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientSetup::init);
     }
 }
+
+
+//Mumien, maybe traps
