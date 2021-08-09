@@ -18,13 +18,17 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import static com.squidxtv.tlos.TheLegendOfSteve.MODID;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = MODID)
 public class Registration {
 
     private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -71,4 +75,9 @@ public class Registration {
             .sized(1, 1).build("pharaoh"));
     //public static final RegistryObject<Item> PHARAOH_EGG = ITEMS.register("pharaoh_egg", () -> new PharaohEggItem(PHARAOH.get(),  0x4da744, 0x316f5d, new Item.Properties().tab(ModSetup.GROUP).stacksTo(1)));
 
+
+    @SubscribeEvent
+    public static void attributes(EntityAttributeCreationEvent e) {
+        e.put(Registration.PHARAOH.get(), PharaohEntity.prepareAttributes().build());
+    }
 }
