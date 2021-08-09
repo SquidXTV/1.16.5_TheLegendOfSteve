@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    " / ",
+    "  /"
+  ],
+  "key": {
+    "#": {
+      "item": "tlos:tntx64"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "tlos:tnt_launcher",
+    "count": 1
+  }
+}

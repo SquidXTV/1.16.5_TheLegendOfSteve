@@ -1,0 +1,16 @@
+{
+  //Items
+  "item.tlos.damage_artifact": "Damage Artifact",
+  "item.tlos.tnt_launcher": "TNT Launcher",
+  "item.tlos.heal_spell": "Heal Spell",
+  "item.tlos.strength_spell": "Strength Spell",
+  "item.tlos.tank_apple": "Tank Apple",
+
+  //Blocks
+  "block.tlos.tntx8": "TNTx8",
+  "block.tlos.tntx64": "TNTx64",
+
+  //Creative Tab
+  "itemGroup.tlosGroup": "The Legend Of Steve"
+
+}

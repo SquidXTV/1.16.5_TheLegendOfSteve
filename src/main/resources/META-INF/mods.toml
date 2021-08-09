@@ -1,0 +1,36 @@
+
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory
+license="All rights reserved"
+
+[[mods]] #mandatory
+modId="tlos" #mandatory
+version="0.1.0" #mandatory
+displayName="The Legend of Steve" #mandatory
+logoFile="" #optional
+credits="" #optional
+authors="SquidXTV" #optional
+description='''
+The Legend of Steve...
+'''
+
+[[dependencies.tlos]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[36,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.tlos]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.tlos]]
+    modId="curios"
+    mandatory=true
+    versionRange="1.16.5-4.0.5.2,)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,17 @@
+{
+  "name": "repurposed_structures:big_pyramid_dungeon/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+
+      "elements": {
+        "location": "",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
