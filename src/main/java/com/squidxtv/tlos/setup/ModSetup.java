@@ -24,9 +24,6 @@ public class ModSetup {
     public static void init(final FMLCommonSetupEvent event){
         Networking.registerMessages();
 
-        event.enqueueWork(() -> {
-            GlobalEntityTypeAttributes.put(Registration.PHARAOH.get(), PharaohEntity.prepareAttributes().build());
-        });
     }
 
     @SubscribeEvent
