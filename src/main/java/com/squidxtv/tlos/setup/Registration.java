@@ -41,6 +41,8 @@ public class Registration {
 
     public static final RegistryObject<TNTStaff> TNT_LAUNCHER = ITEMS.register("tnt_launcher", () ->
             new TNTStaff(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1).durability(128)));
+    public static final RegistryObject<SummonStaff> SUMMON_STAFF = ITEMS.register("summon_staff", () ->
+            new SummonStaff(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1).durability(3)));
 
     public static final RegistryObject<Item> TANK_APPLE = ITEMS.register("tank_apple", () ->
             new Item(new Item.Properties().tab(ModSetup.GROUP).food(TankApple)));
