@@ -6,11 +6,13 @@ import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraft.world.Difficulty;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
@@ -69,7 +71,7 @@ public class Registration {
     //Entities:
     public static final RegistryObject<EntityType<PharaohEntity>> PHARAOH = ENTITIES.register("pharaoh", () -> EntityType.Builder.of(PharaohEntity::new, EntityClassification.MONSTER)
             .sized(.6F, 2.1F).build("pharaoh"));
-    public static final RegistryObject<Item> PHARAOH_SPAWN_EGG = ITEMS.register("pharaoh_spawn_egg", () -> new TheLegendOfSteveSpawnEgg(new Item.Properties().tab(ModSetup.GROUP).stacksTo(1), PHARAOH::get, 16118736, 12563995));
+    public static final RegistryObject<Item> PHARAOH_SPAWN_EGG = ITEMS.register("pharaoh_spawn_egg", () -> new TheLegendOfSteveSpawnEgg(new Item.Properties().tab(ModSetup.GROUP).stacksTo(64), PHARAOH::get, 16118736, 12563995));
 
 
     @SubscribeEvent
